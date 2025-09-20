@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Distribución de Mesas</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nunito:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="Style.css" />
+</head>
+
+<body class="bg-light">
+
+  <header class="container py-5 text-center">
+    <h1 class="display-4 titulo-evento">Bienvenidos al cumpleaños de Mario Andres Londoño</h1>
+    <p class="lead">Verifica tu mesa ingresando tu nombre</p>
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6 mt-4">
+        <input type="text" id="searchInput" class="form-control form-control-lg" placeholder="Por favor busca tu nombre aquí...">
+      </div>
+    </div>
+  </header>
+
+  <main class="container py-4">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="mesasContainer">
+
+      <!-- MESA 1 -->
+      <div class="col mesa-card" data-guests="juan david ramírez gonzález valentina rodríguez pérez mateo martínez castro camila herrera lópez santiago jiménez rojas isabella torres morales daniel gómez vargas">
+        <div class="card h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title mesa-titulo">Mesa 1</h5>
+            <ul class="list-unstyled invitados-list">
+              <li>Juan David Ramírez González</li>
+              <li>Valentina Rodríguez Pérez</li>
+              <li>Mateo Martínez Castro</li>
+              <li>Camila Herrera López</li>
+              <li>Santiago Jiménez Rojas</li>
+              <li>Isabella Torres Morales</li>
+              <li>Daniel Gómez Vargas</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- MESA 2 -->
+      <div class="col mesa-card" data-guests="maría fernanda ruiz salazar tomás mendoza ortega laura sofía castaño mejía samuel romero duarte sara alejandra pineda león andrés felipe navarro torres">
+        <div class="card h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title mesa-titulo">Mesa 2</h5>
+            <ul class="list-unstyled invitados-list">
+              <li>María Fernanda Ruiz Salazar</li>
+              <li>Tomás Mendoza Ortega</li>
+              <li>Laura Sofía Castaño Mejía</li>
+              <li>Samuel Romero Duarte</li>
+              <li>Sara Alejandra Pineda León</li>
+              <li>Andrés Felipe Navarro Torres</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- MESA 3 -->
+      <div class="col mesa-card" data-guests="manuela garcía bermúdez sebastián acosta gil natalia peña rodríguez carlos daniel arias pardo paula andrea londoño martínez alejandro quintero restrepo">
+        <div class="card h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title mesa-titulo">Mesa 3</h5>
+            <ul class="list-unstyled invitados-list">
+              <li>Manuela García Bermúdez</li>
+              <li>Sebastián Acosta Gil</li>
+              <li>Natalia Peña Rodríguez</li>
+              <li>Carlos Daniel Arias Pardo</li>
+              <li>Paula Andrea Londoño Martínez</li>
+              <li>Alejandro Quintero Restrepo</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- MESA 4 -->
+      <div class="col mesa-card" data-guests="gabriela lozano cárdenas juan pablo silva gómez luisa fernanda tapia romero david barrera mendoza juliana rincón suárez miguel ángel cortés velasco">
+        <div class="card h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title mesa-titulo">Mesa 4</h5>
+            <ul class="list-unstyled invitados-list">
+              <li>Gabriela Lozano Cárdenas</li>
+              <li>Juan Pablo Silva Gómez</li>
+              <li>Luisa Fernanda Tapia Romero</li>
+              <li>David Barrera Mendoza</li>
+              <li>Juliana Rincón Suárez</li>
+              <li>Miguel Ángel Cortés Velasco</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- MESA 5 -->
+      <div class="col mesa-card" data-guests="catalina valencia aguirre esteban vargas niño ana maría espinosa ruiz nicolás becerra peña daniela cabrera fajardo jorge eliecer salinas páez">
+        <div class="card h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title mesa-titulo">Mesa 5</h5>
+            <ul class="list-unstyled invitados-list">
+              <li>Catalina Valencia Aguirre</li>
+              <li>Esteban Vargas Niño</li>
+              <li>Ana María Espinosa Ruiz</li>
+              <li>Nicolás Becerra Peña</li>
+              <li>Daniela Cabrera Fajardo</li>
+              <li>Jorge Eliecer Salinas Páez</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="container text-center py-4">
+    <p class="text-muted small">© StefaniaWebIngenieria | 2025. All Rights Reserved StefaniaWebIngenieria.</p>
+  </footer>
+
+  <!-- JavaScript para búsqueda y resaltado -->
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const mesas = document.querySelectorAll('.mesa-card');
+
+    // Guardar texto original
+    mesas.forEach(mesa => {
+      const nombres = mesa.querySelectorAll('li');
+      nombres.forEach(nombre => {
+        if (!nombre.hasAttribute('data-original-text')) {
+          nombre.setAttribute('data-original-text', nombre.textContent.trim());
+        }
+      });
+    });
+
+    searchInput.addEventListener('input', () => {
+      const busqueda = searchInput.value.toLowerCase().trim();
+
+      mesas.forEach(mesa => {
+        const invitados = mesa.getAttribute('data-guests');
+        const nombres = mesa.querySelectorAll('li');
+
+        if (invitados.includes(busqueda) || busqueda === '') {
+          mesa.style.display = '';
+        } else {
+          mesa.style.display = 'none';
+        }
+
+        // Resaltar coincidencias
+        nombres.forEach(nombre => {
+          const textoOriginal = nombre.getAttribute('data-original-text');
+          nombre.innerHTML = textoOriginal;
+
+          if (busqueda && textoOriginal.toLowerCase().includes(busqueda)) {
+            const regex = new RegExp(`(${busqueda})`, 'gi');
+            nombre.innerHTML = textoOriginal.replace(regex, '<span class="bg-warning">$1</span>');
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
