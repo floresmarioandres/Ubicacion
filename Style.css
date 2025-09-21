@@ -32,8 +32,8 @@ body {
 
 /* Tarjeta con tono más subido, borde hermoso y esquinas redondeadas */
 .card {
-    background: #ffeef0; /* Un tono pastel rosado más subido */
-    border: 3px solid #e8b8b8; /* Un borde con tono rosado */
+    background: #b0f2c2; /* Un tono pastel rosado más subido */
+    border: 3px solid #64a377; /* Un borde con tono rosado */
     border-radius: 20px; /* Esquinas redondeadas */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     box-shadow: 0 4px 8px rgba(0,0,0,0.08);
@@ -64,4 +64,5 @@ footer p {
     background-color: rgba(72, 255, 0, 0.651);
     font-weight: bold;
     color: #000;
+
 }
